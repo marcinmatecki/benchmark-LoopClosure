@@ -40,7 +40,7 @@ The script automatically runs:
 2. Clone repositories and build Docker images
 3. Run traditional loop-closure methods
 4. Run AI loop-closure methods
-5. Run Open3D loop closure
+5. Run Open3D 
 
 Results are stored in:
 
@@ -58,7 +58,7 @@ The benchmark is organized into five steps:
 2. **Clone Repositories**
 3. **Traditional Loop Closure Methods**
 4. **AI Loop Closure Methods**
-5. **Open3D Loop Closure**
+5. **Open3D**
 
 The goal is to provide a common dataset and a reproducible environment
 for comparing different loop closure approaches.
@@ -72,4 +72,4 @@ for comparing different loop closure approaches.
 - clone_github_repositories_step2/
 - traditional_loop_closure_methods_step3/
 - ai_loop_closure_methods_step4/
-- open3d_loop_closure_step5/
+- open3d_step5/
