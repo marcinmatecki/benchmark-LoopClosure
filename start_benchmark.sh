@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 set -e
 
 echo "==========================================="
@@ -22,91 +22,91 @@ TRADITIONAL_OUTPUT="$DATA_DIR"
 AI_OUTPUT="$DATA_DIR"
 OPEN3D_OUTPUT="$DATA_DIR"
 
-echo
-echo "==========================================="
-echo "STEP 1 - PREPARE DATA"
-echo "==========================================="
+# echo
+# echo "==========================================="
+# echo "STEP 1 - PREPARE DATA"
+# echo "==========================================="
 
-"$SCRIPT_DIR/prepare_data_step1/prepare_data_step1.sh"
+# "$SCRIPT_DIR/prepare_data_step1/prepare_data_step1.sh"
 
-echo
-echo "STEP 1 DONE"
+# echo
+# echo "STEP 1 DONE"
 
-echo
-echo "==========================================="
-echo "CHECKING PREPARED DATA"
-echo "==========================================="
+# echo
+# echo "==========================================="
+# echo "CHECKING PREPARED DATA"
+# echo "==========================================="
 
-echo
-echo "Data directory:"
-echo "$DATA_DIR"
+# echo
+# echo "Data directory:"
+# echo "$DATA_DIR"
 
-if [[ ! -d "$DATA_DIR" ]]; then
-    echo "ERROR: Data directory does not exist:"
-    echo "$DATA_DIR"
-    exit 1
-fi
+# if [[ ! -d "$DATA_DIR" ]]; then
+#     echo "ERROR: Data directory does not exist:"
+#     echo "$DATA_DIR"
+#     exit 1
+# fi
 
-echo "OK"
+# echo "OK"
 
-echo
-echo "KITTI:"
-echo "$KITTI_DIR"
+# echo
+# echo "KITTI:"
+# echo "$KITTI_DIR"
 
-if [[ ! -d "$KITTI_DIR" ]]; then
-    echo "ERROR: KITTI directory does not exist:"
-    echo "$KITTI_DIR"
-    exit 1
-fi
+# if [[ ! -d "$KITTI_DIR" ]]; then
+#     echo "ERROR: KITTI directory does not exist:"
+#     echo "$KITTI_DIR"
+#     exit 1
+# fi
 
-echo "OK"
+# echo "OK"
 
-echo
-echo "KITTI ROS2:"
-echo "$KITTI_ROS2_DIR"
+# echo
+# echo "KITTI ROS2:"
+# echo "$KITTI_ROS2_DIR"
 
-if [[ ! -d "$KITTI_ROS2_DIR" ]]; then
-    echo "ERROR: KITTI ROS2 directory does not exist:"
-    echo "$KITTI_ROS2_DIR"
-    exit 1
-fi
+# if [[ ! -d "$KITTI_ROS2_DIR" ]]; then
+#     echo "ERROR: KITTI ROS2 directory does not exist:"
+#     echo "$KITTI_ROS2_DIR"
+#     exit 1
+# fi
 
-echo "OK"
+# echo "OK"
 
-echo
-echo "ROS2:"
-echo "$ROS2_DIR"
+# echo
+# echo "ROS2:"
+# echo "$ROS2_DIR"
 
-if [[ ! -d "$ROS2_DIR" ]]; then
-    echo "ERROR: ROS2 directory does not exist:"
-    echo "$ROS2_DIR"
-    exit 1
-fi
+# if [[ ! -d "$ROS2_DIR" ]]; then
+#     echo "ERROR: ROS2 directory does not exist:"
+#     echo "$ROS2_DIR"
+#     exit 1
+# fi
 
-echo "OK"
+# echo "OK"
 
-echo
-echo "ROS1 BAG:"
-echo "$ROS1_BAG"
+# echo
+# echo "ROS1 BAG:"
+# echo "$ROS1_BAG"
 
-if [[ ! -f "$ROS1_BAG" ]]; then
-    echo "ERROR: ROS1 bag does not exist:"
-    echo "$ROS1_BAG"
-    exit 1
-fi
+# if [[ ! -f "$ROS1_BAG" ]]; then
+#     echo "ERROR: ROS1 bag does not exist:"
+#     echo "$ROS1_BAG"
+#     exit 1
+# fi
 
-echo "OK"
+# echo "OK"
 
 
-echo
-echo "==========================================="
-echo "STEP 2 - CLONE GITHUB REPOSITORIES"
-echo "==========================================="
+# echo
+# echo "==========================================="
+# echo "STEP 2 - CLONE GITHUB REPOSITORIES"
+# echo "==========================================="
 
-"$SCRIPT_DIR/clone_github_repositories_step2/clone_github_repositories_step2.sh"
+# "$SCRIPT_DIR/clone_github_repositories_step2/clone_github_repositories_step2.sh" main
 
-echo
-echo "STEP 2 DONE"
+# echo
+# echo "STEP 2 DONE"
 
 
 echo
@@ -116,19 +116,18 @@ echo "==========================================="
 
 echo
 echo "KITTI directory:"
-echo "$KITTI_DIR"
+echo "$ROS2_DIR"
 
 echo
 echo "Output directory:"
 echo "$TRADITIONAL_OUTPUT"
 
 "$SCRIPT_DIR/traditional_loop_closure_methods_step3/run_benchmark_traditional.sh" \
-    "$KITTI_DIR" \
+    "$ROS2_DIR" \
     "$TRADITIONAL_OUTPUT"
 
 echo
 echo "STEP 3 DONE"
-
 
 echo
 echo "==========================================="
@@ -136,15 +135,15 @@ echo "STEP 4 - AI LOOP CLOSURE"
 echo "==========================================="
 
 echo
-echo "KITTI ROS2 directory:"
-echo "$KITTI_ROS2_DIR"
+echo "ROS1 BAG:"
+echo "$ROS1_BAG"
 
 echo
 echo "Output directory:"
 echo "$AI_OUTPUT"
 
 "$SCRIPT_DIR/ai_loop_closure_methods_step4/run_benchmark_AI.sh" \
-    "$KITTI_ROS2_DIR" \
+    "$ROS1_BAG" \
     "$AI_OUTPUT"
 
 echo

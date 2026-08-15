@@ -25,7 +25,7 @@ OUTPUT_DIR=$(realpath "$2")
 mkdir -p "$OUTPUT_DIR"
 
 CLONE_DIR="$HOME/hdmapping-benchmark-loop-closure"
-KISS_MATCHER_REPO="$CLONE_DIR/benchmark-HDMapping-AILoopClosure-KISS-MATCHER"
+KISS_MATCHER_REPO="$CLONE_DIR/KISS-MATCHER-to-HDMAPPING"
 KISS_MATCHER_IMAGE="kiss-matcher"
 
 echo "==========================================="

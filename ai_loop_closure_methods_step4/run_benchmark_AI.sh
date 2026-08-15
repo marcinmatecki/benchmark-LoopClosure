@@ -1,4 +1,3 @@
-```bash
 #!/bin/bash
 
 set -e
@@ -33,7 +32,7 @@ mkdir -p "$OUTPUT_DIR"
 
 CLONE_DIR="$HOME/hdmapping-benchmark-loop-closure"
 
-BEV_LIO_LC_REPO="$CLONE_DIR/benchmark-HDMapping-AILoopClosure-BEV-LIO-LC"
+BEV_LIO_LC_REPO="$CLONE_DIR/BEV-LIO-LC-to-HDMAPPING"
 
 BEV_LIO_LC_SCRIPT="$BEV_LIO_LC_REPO/docker_session_run-ros1-bev-lio-lc.sh"
 
@@ -89,4 +88,4 @@ echo
 echo "==========================================="
 echo "STEP 4 DONE"
 echo "==========================================="
-```
+
