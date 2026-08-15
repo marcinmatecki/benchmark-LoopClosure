@@ -4,7 +4,7 @@ set -e
 
 CLONE_DIR="$HOME/hdmapping-benchmark-loop-closure"
 
-OPEN3D_REPO="$CLONE_DIR/benchmark-HDMapping-AILoopClosure-Open3D"
+OPEN3D_REPO="$CLONE_DIR/Open3D-to-HDMAPPING"
 
 OPEN3D_SCRIPT="$OPEN3D_REPO/docker_session_run-open3d.sh"
 
