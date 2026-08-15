@@ -1,7 +1,5 @@
 # HDMapping Loop Closure Benchmark
 
-# benchmark-HDMapping-LoopClosure-Orchestration
-
 # Option 1 (Full automation)
 
 ## Step 1 - Prepare data
